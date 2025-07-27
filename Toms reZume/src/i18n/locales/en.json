@@ -1,0 +1,660 @@
+{
+  "common": {
+    "title": "Tom's reZume",
+    "subtitle": "Innovative Music Notebook Editor",
+    "description": "Tom's reZume is an open source music notebook editor, free, privacy-first. No registration required, all data stored locally, support data backup and export, ensuring your music notes are always available.",
+    "dashboard": "Dashboard",
+    "edit": "Edit",
+    "delete": "Delete",
+    "newResume": "New reZume",
+    "copy": "Copy"
+  },
+  "home": {
+    "header": {
+      "title": "Tom's reZume",
+      "startButton": "Get Started",
+      "features": "Features",
+      "pricing": "Pricing",
+      "about": "About",
+      "login": "Login",
+      "register": "Register",
+      "dashboard": "Dashboard"
+    },
+    "hero": {
+      "badge": "Smart reZume Creation",
+      "title": "Make reZume Creation Simple and Smart",
+      "subtitle": "Tom's reZume helps you quickly create resume-like music notebooks. Simple, yet good-looking, brat.",
+      "cta": "Get Started",
+      "secondary": "Browse reZume Templates"
+    },
+    "introduction": {
+      "title": "What is a reZume?",
+      "description": "A reZume is an innovative music notebook that combines the simplicity of traditional note-taking with the advanced features of modern technology. It allows musicians to create, edit, and organize the musical ideas effortlessly.",
+      "cta": "Start Creating Your Music Notebook"
+    },
+    "features": {
+      "title": "Why Choose Tom's reZume?",
+      "subtitle": "To make a fresh music notebook in a safe, resume-like way.",
+      "style": {
+        "badge": "Resume-like Style",
+        "title": "For those who hate complexity...",
+        "description": "Handy editor and simple style, accompanied with AI optimization, provide you with great user experience.",
+        "item1": "handy editor",
+        "item1_description": "...",
+        "item2": "fresh style",
+        "item2_description": "..."
+      },
+      "storage": {
+        "badge": "Local Storage",
+        "title": "Data Security, Privacy First",
+        "description": "All resume data is fully stored locally, no need to worry about privacy leaks. Support data export backup.",
+        "item1": "Local file storage",
+        "item1_description": "Resume data securely stored on your computer's hard drive",
+        "item2": "Multiple export formats",
+        "item2_description": "Support PDF and JSON format export",
+        "item3": "Support data export backup"
+      },
+      "preview": {
+        "badge": "Real-time Preview",
+        "title": "What You See Is What You Get",
+        "item1": "Real-time preview of editing effects",
+        "item2": "Multiple export format support"
+      }
+    },
+    "news": {
+      "label": "News",
+      "content": "Possible future updates include: color changing, layout switching."
+    },
+    "footer": {
+      "copyright": " 2025 Tom's reZume. All rights reserved."
+    },
+    "changelog": "Changelog",
+    "cta": {
+      "title": "Start Your New Music Era",
+      "description": "Start using Tom's reZume now to create an impressive resume",
+      "button": "Start Using for Free"
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": [
+        {
+          "question": "Is Tom's reZume free to use?",
+          "answer": "Tom's reZume is currently free, meeting basic resume creation needs. The open-source version's features will remain unchanged, and the PDF export feature will always be free."
+        },
+        {
+          "question": "Is my resume data secure?",
+          "answer": "Yes, very secure. Tom's reZume uses local storage, meaning all your data is stored on your own device with no cloud storage, ensuring complete privacy protection."
+        },
+        {
+          "question": "What export formats are supported?",
+          "answer": "We currently support PDF export, ensuring your resume maintains consistent formatting on any device. We plan to support more export formats in the future."
+        },
+        {
+          "question": "How can I sync across devices?",
+          "answer": "We provide JSON configuration export, allowing you to save your resume settings in JSON format, accessible anytime, anywhere, on any device."
+        },
+        {
+          "question": "How customizable is it?",
+          "answer": "We offer rich customization options, including colors, layouts, and more, allowing you to adjust your resume style according to personal preferences and industry requirements."
+        }
+      ]
+    }
+  },
+  "dashboard": {
+    "leftOfTrigger" : "Wrap Sidebar",
+    "rightOfTrigger" : "Unwrap Sidebar",
+    "sidebar": {
+      "resumes": "ReZumes",
+      "settings": "Settings",
+      "templates": "Templates",
+      "ai": "AI Config"
+    },
+    "resumes": {
+      "created": "Created At",
+      "synced": "Synced Files",
+      "view": "View",
+      "myResume": "My ReZumes",
+      "create": "Create ReZume",
+      "newResume": "New ReZume",
+      "newResumeDescription": "Create a new reZume to get started.",
+      "import": "Import JSON Config",
+      "untitled": "Untitled ReZume",
+      "importSuccess": "Configuration imported successfully",
+      "importError": "Import failed, please check the file format",
+      "notice": {
+        "title": "Attention",
+        "description": "It is recommended to configure a reZume backup folder in the settings to prevent your data from being lost when the browser cache is cleared",
+        "goToSettings": "Go to Settings"
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "syncDirectory": {
+        "title": "Sync Directory",
+        "description": "Choose a folder to sync and backup your reZumes.",
+        "currentSyncFolder": "Current Sync Folder",
+        "noFolderConfigured": "No folder configured",
+        "changeFolder": "Change Folder",
+        "selectFolder": "Select Folder"
+      },
+      "sync": {
+        "title": "Sync Directory",
+        "description": "Choose a folder to sync and backup your reZumes.",
+        "select": "Select Folder"
+      },
+      "lang": {
+        "title": "Language",
+        "description": "Select the language for the application interface.",
+        "languages": {
+          "en": "English",
+          "zh": "中文"
+        }
+      },
+      "theme" :{
+        "title": "Theme",
+        "description": "Select the theme for the application interface.",
+        "themes": {
+          "light": "Light",
+          "dark": "Dark",
+          "system": "System Default"
+        }
+      },
+      "ai": {
+        "title": "AI Configuration",
+        "currentModel": "Current Model",
+        "selectModel": "Select Model",
+        "getApiKey": "Get API Key",
+        "doubao": {
+          "title": "Doubao",
+          "description": "Get API key from Volcengine",
+          "apiKey": "Doubao API Key",
+          "modelId": "Model ID"
+        },
+        "deepseek": {
+          "title": "DeepSeek",
+          "description": "Get API key from DeepSeek Platform",
+          "apiKey": "DeepSeek API Key"
+        },
+        "openai": {
+          "title": "OpenAI",
+          "description": "Obtain the API key at OpenAI or an open platform compatible with the OpenAI format",
+          "apiKey": "OpenAI API Key",
+          "modelId": "Model ID",
+          "apiEndpoint": "API Endpoint, example: https://openai.example.org/v1"
+        }
+      }
+    },
+    "templates": {
+      "title": "Templates",
+      "useTemplate": "Use Template",
+      "preview": "Preview",
+      "switchTemplate": "Switch Template",
+      "classic": {
+        "name": "Classic",
+        "description": "Traditional and minimalist layout, suitable for most job applications"
+      },
+      "modern": {
+        "name": "Two Column",
+        "description": "Classic two-column layout, highlighting personal characteristics"
+      },
+      "leftRight": {
+        "name": "Section Title Background",
+        "description": "Distinctive section titles with background color"
+      },
+      "timeline": {
+        "name": "Timeline Layout",
+        "description": "Timeline style, emphasizing chronological order of experiences"
+      }
+    }
+  },
+  "pdfExport": {
+    "button": {
+      "export": "Export",
+      "exportPdf": "Export PDF (Server)",
+      "exportJson": "Export JSON Config",
+      "exporting": "Exporting...",
+      "exportingJson": "Exporting...",
+      "print": "Browser Print"
+    },
+    "toast": {
+      "success": "PDF exported successfully",
+      "error": "PDF export failed",
+      "jsonSuccess": "Configuration exported successfully",
+      "jsonError": "Configuration export failed"
+    }
+  },
+  "previewDock": {
+    "switchTemplate": "Switch Template",
+    "grammarCheck": {
+      "idle": "AI Grammar Check",
+      "checking": "Checking...",
+      "configurePrompt": "Please configure AI Model",
+      "configureButton": "Configure",
+      "errorToast": "Grammar check failed, please try again"
+    },
+    "sidePanel": {
+      "expand": "Expand Side Panel",
+      "collapse": "Collapse Side Panel"
+    },
+    "editPanel": {
+      "expand": "Expand Edit Panel",
+      "collapse": "Collapse Edit Panel"
+    },
+    "github": "GitHub",
+    "backToDashboard": "Back to Dashboard",
+    "copyResume": {
+      "tooltip": "Copy ReZume",
+      "success": "ReZume copied successfully",
+      "error": "Failed to copy ReZume"
+    }
+  },
+  "workbench": {
+    "sidePanel": {
+      "layout": {
+        "title": "Layout",
+        "addCustomSection": "Add Custom Section"
+      },
+      "theme": {
+        "title": "Theme Color",
+        "custom": "Custom"
+      },
+      "typography": {
+        "title": "Typography",
+        "font": {
+          "title": "Font",
+          "sans": "Sans-serif",
+          "serif": "Serif",
+          "mono": "Monospace"
+        },
+        "lineHeight": {
+          "title": "Line Height",
+          "normal": "Default",
+          "relaxed": "Relaxed",
+          "loose": "Loose"
+        },
+        "baseFontSize": {
+          "title": "Base Font Size"
+        },
+        "headerSize": {
+          "title": "Section Header Size"
+        },
+        "subheaderSize": {
+          "title": "Subsection Header Size"
+        }
+      },
+      "spacing": {
+        "title": "Spacing",
+        "pagePadding": {
+          "title": "Page Padding"
+        },
+        "sectionSpacing": {
+          "title": "Section Spacing"
+        },
+        "paragraphSpacing": {
+          "title": "Paragraph Spacing"
+        }
+      },
+      "mode": {
+        "title": "Mode",
+        "useIconMode": {
+          "title": "Icon Mode"
+        },
+        "centerSubtitle": {
+          "title": "Center Subtitle"
+        }
+      }
+    },
+    "basicPanel": {
+      "title": "Profile",
+      "avatar": "Cover",
+      "basicField": "Basic",
+      "customField": "Custom",
+      "layout": "Align",
+      "customFields": {
+        "placeholders": {
+          "label": "Label(probably not needed)",
+          "value": "Value"
+        },
+        "addButton": "Add Custom Field"
+      },
+      "basicFields": {
+        "name": "Name",
+        "title": "Artist",
+        "email": "Email",
+        "phone": "Phone",
+        "website": "Website",
+        "location": "Location",
+        "birthDate": "Release Date",
+        "employementStatus": "Employ"
+      },
+      "fieldVisibility": {
+        "show": "Show",
+        "hide": "Hide"
+      },
+      "githubContributions": "GitHub Contributions"
+    },
+    "experiencePanel": {
+      "title": "Work Experience",
+      "addButton": "Add Work Experience",
+      "defaultProject": {
+        "company": "Tech Company Ltd.",
+        "position": "Senior Frontend Engineer",
+        "date": "2020-Present",
+        "details": "Responsible for core product development..."
+      },
+      "placeholders": {
+        "company": "company name",
+        "position": "job title",
+        "date": "employment period",
+        "details": "job responsibilities and achievements"
+      }
+    },
+    "experienceItem": {
+      "labels": {
+        "company": "Company Name",
+        "position": "Position",
+        "date": "Employment Period",
+        "details": "Job Responsibilities"
+      },
+      "placeholders": {
+        "company": "Enter company name",
+        "position": "e.g., Frontend Engineer",
+        "date": "e.g., 2020-Present",
+        "details": "Describe your responsibilities and achievements in this role"
+      },
+      "buttons": {
+        "edit": "Edit",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "visibility": {
+        "show": "Show",
+        "hide": "Hide"
+      }
+    },
+    "projectPanel": {
+      "title": "Project Experience",
+      "addButton": "Add Project",
+      "defaultProject": {
+        "name": "Media",
+        "description": "Project Description",
+        "role": "Reviewer",
+        "date": "2023.01 - 2023.06"
+      },
+      "placeholders": {
+        "name": "Media Name",
+        "description": "To be filled",
+        "role": "Name of the reviewer",
+        "date": "time range",
+        "link": "Link to the review"
+      }
+    },
+    "projectItem": {
+      "labels": {
+        "name": "Project Name",
+        "role": "Project Role",
+        "date": "Project Period",
+        "description": "Project Description",
+        "technologies": "Tech Stack",
+        "link": "Project Link"
+      },
+      "placeholders": {
+        "name": "Enter project name",
+        "role": "Your role in the project",
+        "date": "Project time range",
+        "description": "Briefly describe project background and goals",
+        "technologies": "Technologies and tools used",
+        "link": "Project link"
+      },
+      "buttons": {
+        "edit": "Edit",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "visibility": {
+        "show": "Show",
+        "hide": "Hide"
+      }
+    },
+    "educationPanel": {
+      "title": "Education",
+      "addButton": "Add Education",
+      "defaultProject": {
+        "school": "School Name",
+        "degree": "Degree",
+        "major": "Major",
+        "date": "2020.09 - 2024.06"
+      },
+      "placeholders": {
+        "school": "Enter school name",
+        "degree": "Select degree",
+        "major": "Enter major",
+        "date": "Enter study period"
+      }
+    },
+    "educationItem": {
+      "labels": {
+        "school": "School Name",
+        "degree": "Degree",
+        "major": "Major",
+        "date": "Study Period",
+        "description": "Description",
+        "gpa": "GPA",
+        "location": "Location",
+        "startDate": "Start Date",
+        "endDate": "End Date"
+      },
+      "placeholders": {
+        "school": "Enter school name",
+        "degree": "Select degree",
+        "major": "Enter major",
+        "date": "Enter study time range",
+        "description": "Enter school description",
+        "gpa": "Enter GPA",
+        "location": "Enter location"
+      },
+      "buttons": {
+        "edit": "Edit",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "visibility": {
+        "show": "Show",
+        "hide": "Hide"
+      }
+    }
+  },
+  "field": {
+    "selectDate": "Select Date",
+    "enterYear": "Enter Year"
+  },
+  "richEditor": {
+    "bold": "Bold",
+    "italic": "Italic",
+    "underline": "Underline",
+    "textColor": "Text Color",
+    "backgroundColor": "Background Color",
+    "alignLeft": "Align Left",
+    "alignCenter": "Align Center",
+    "alignRight": "Align Right",
+    "alignJustify": "Justify",
+    "bulletList": "Bullet List",
+    "orderedList": "Ordered List",
+    "undo": "Undo",
+    "redo": "Redo",
+    "aiPolish": "AI Polish",
+    "paragraph": "Paragraph",
+    "heading1": "Heading 1",
+    "heading2": "Heading 2",
+    "heading3": "Heading 3",
+    "colors": {
+      "black": "Black",
+      "darkGray": "Dark Gray",
+      "gray": "Gray",
+      "red": "Red",
+      "orange": "Orange",
+      "orangeYellow": "Orange Yellow",
+      "yellow": "Yellow",
+      "yellowGreen": "Yellow Green",
+      "green": "Green",
+      "cyan": "Cyan",
+      "lightBlue": "Light Blue",
+      "blue": "Blue",
+      "purple": "Purple",
+      "magenta": "Magenta",
+      "pink": "Pink"
+    }
+  },
+  "iconSelector": {
+    "all": "All",
+    "searchPlaceholder": "Search icons...",
+    "noMatchingIcons": "No matching icons found",
+    "tryOtherKeywords": "Please try other search keywords",
+    "selectOtherCategory": "Please select another category",
+    "categories": {
+      "personal": "Personal Info",
+      "education": "Education",
+      "experience": "Work Experience",
+      "skills": "Skills",
+      "languages": "Languages",
+      "projects": "Projects",
+      "achievements": "Achievements",
+      "hobbies": "Hobbies",
+      "social": "Social Media",
+      "others": "Others"
+    },
+    "icons": {
+      "user": "User",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "website": "Website",
+      "mobile": "Mobile",
+      "education": "Education",
+      "school": "School",
+      "major": "Major",
+      "library": "Library",
+      "scholarship": "Scholarship",
+      "work": "Work",
+      "company": "Company",
+      "office": "Office",
+      "dateRange": "Date Range",
+      "workTime": "Work Time",
+      "programming": "Programming",
+      "system": "System",
+      "database": "Database",
+      "terminal": "Terminal",
+      "techStack": "Tech Stack",
+      "language": "Language",
+      "speaking": "Speaking",
+      "communication": "Communication",
+      "project": "Project",
+      "branch": "Branch",
+      "release": "Release",
+      "target": "Target",
+      "trophy": "Trophy",
+      "medal": "Medal",
+      "star": "Star",
+      "interest": "Interest",
+      "music": "Music",
+      "art": "Art",
+      "photography": "Photography",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "profile": "Profile",
+      "review": "Review",
+      "filter": "Filter",
+      "link": "Link",
+      "salary": "Salary",
+      "idea": "Idea",
+      "send": "Send",
+      "share": "Share",
+      "settings": "Settings",
+      "search": "Search",
+      "flag": "Flag",
+      "bookmark": "Bookmark",
+      "thumbsUp": "Thumbs Up",
+      "skill": "Skill"
+    }
+  },
+  "aiPolishDialog": {
+    "title": "AI Polish",
+    "description": {
+      "polishing": "Polishing your content...",
+      "finished": "Content has been optimized, please check the result"
+    },
+    "error": {
+      "configRequired": "Please configure AI model first",
+      "polishFailed": "Polish failed",
+      "applied": "Polish content applied"
+    },
+    "content": {
+      "original": "Original Content",
+      "polished": "Polished Content"
+    },
+    "button": {
+      "regenerate": "Regenerate",
+      "generating": "Generating...",
+      "apply": "Apply Content"
+    }
+  },
+  "photoConfig": {
+    "title": "Photo Settings",
+    "description": "Customize your resume photo",
+    "upload": {
+      "title": "Online Link",
+      "dragHint": "Drag and drop or click to upload image",
+      "sizeLimit": "Image size must not exceed 2MB",
+      "typeLimit": "Please upload an image file",
+      "urlPlaceholder": "Enter image link",
+      "invalidUrl": "Invalid image URL or inaccessible, please try another image link",
+      "timeout": "Loading timeout",
+      "loadError": "Failed to load image"
+    },
+    "config": {
+      "aspectRatio": "Aspect Ratio",
+      "size": "Size",
+      "width": "Width",
+      "height": "Height",
+      "border-radius": "Border Radius",
+      "widthPlaceholder": "Width",
+      "heightPlaceholder": "Height",
+      "ratios": {
+        "1:1": "1:1 Square",
+        "4:3": "4:3 Landscape",
+        "3:4": "3:4 Portrait",
+        "16:9": "16:9 Widescreen",
+        "custom": "Custom"
+      },
+      "borderRadius": {
+        "none": "None",
+        "medium": "Medium",
+        "full": "Circle",
+        "custom": "Custom",
+        "customPlaceholder": "Custom border radius"
+      }
+    },
+    "actions": {
+      "reset": "Reset",
+      "close": "Close",
+      "cancel": "Cancel",
+      "removePhoto": "Remove Photo"
+    }
+  },
+  "templates": {
+    "switchTemplate": "Switch Template"
+  },
+  "themeModal": {
+    "delete": {
+      "title": "Confirm Deletion",
+      "description": "Are you sure you want to delete {title}?",
+      "confirmText": "Delete",
+      "cancelText": "Cancel"
+    }
+  }
+}
