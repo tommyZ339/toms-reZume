@@ -60,8 +60,8 @@ src/
 ### 音乐评价展示
 
 <div align="center">
-  <img src="public/reviews/bratReview.jpg" alt="Brat 专辑评价" width="400" style="margin: 10px;">
-  <img src="public/reviews/esReview.jpg" alt="ES 专辑评价" width="400" style="margin: 10px;">
+  <img src="Toms reZume/public/reviews/bratReview.jpg" alt="Brat 专辑评价" width="400" style="margin: 10px;">
+  <img src="Toms reZume/public/reviews/esReview.jpg" alt="ES 专辑评价" width="400" style="margin: 10px;">
 </div>
 
 > 展示音乐专辑评价的记录效果
