@@ -149,12 +149,6 @@ pnpm lint     # 代码检查
 - ✅ 支持数据导出备份
 - ✅ 开源透明
 
-## 💡 致谢
-
-特别感谢：
-
-- [magic-resume](https://github.com/JOYCEQL/magic-resume) - 为本项目提供了设计灵感和技术参考
-
 ---
 
 <div align="center">
