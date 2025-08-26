@@ -11,7 +11,7 @@ export const DEFAULT_TEMPLATES: ResumeTemplate[] = [
   {
     id: 'classic',
     name: '经典模板',
-    description: '传统简约的简历布局，适合大多数求职场景',
+    description: '传统简约的简历布局，适合大多数场景',
     thumbnail: 'classic',
     layout: 'classic',
     colorScheme: {

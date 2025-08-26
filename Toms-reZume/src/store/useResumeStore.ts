@@ -137,7 +137,7 @@ export const useResumeStore = create(
           createdAt: new Date().toISOString(),
           updatedAt: new Date().toISOString(),
           templateId: template?.id,
-          title: `${locale === "en" ? "New Resume" : "新建简历"} ${id.slice(
+          title: `${locale === "en" ? "New reZume" : "新建金汤历"} ${id.slice(
             0,
             6
           )}`,

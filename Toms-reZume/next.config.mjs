@@ -10,6 +10,9 @@ const config = {
     ignoreBuildErrors: true,
   },
   output: "standalone",
+  images: {
+    domains: ["i.scdn.co"],
+  }
 };
 
 export default withNextIntl(config);

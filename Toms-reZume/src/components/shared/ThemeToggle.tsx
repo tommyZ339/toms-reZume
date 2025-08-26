@@ -10,9 +10,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 const ThemeToggle = ({ children }: { children?: React.ReactNode }) => {
   const { theme, setTheme, systemTheme } = useTheme();
+  const t = useTranslations("home.theme");
   const [mounted, setMounted] = React.useState(false);
 
   // 确保组件挂载后再渲染
@@ -35,14 +37,15 @@ const ThemeToggle = ({ children }: { children?: React.ReactNode }) => {
           <Button
             variant="outline"
             size="icon"
-            className="relative overflow-hidden"
+            className="relative overflow-hidden hover:bg-accent/50"
           >
             <Sun
               className={cn(
                 "h-[1.2rem] w-[1.2rem] transition-all duration-500",
                 currentTheme === "dark"
                   ? "-rotate-90 scale-0"
-                  : "rotate-0 scale-100"
+                  : "rotate-0 scale-100",
+                  "hover:bg-accent/50"
               )}
             />
             <Moon
@@ -50,7 +53,8 @@ const ThemeToggle = ({ children }: { children?: React.ReactNode }) => {
                 "absolute h-[1.2rem] w-[1.2rem] transition-all duration-500",
                 currentTheme === "dark"
                   ? "rotate-0 scale-100"
-                  : "rotate-90 scale-0"
+                  : "rotate-90 scale-0",
+                  "hover:bg-accent/50"
               )}
             />
             <span className="sr-only">Toggle theme</span>
@@ -61,13 +65,13 @@ const ThemeToggle = ({ children }: { children?: React.ReactNode }) => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+          {t("light")}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+          {t("dark")}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+          {t("system")}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

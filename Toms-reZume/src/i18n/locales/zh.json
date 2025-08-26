@@ -64,7 +64,7 @@
     },
     "news": {
       "label": "新闻",
-      "content": " Welcome to Tom's reZume"
+      "content": " 未来会增加更多功能，如模板预设"
     },
     "cta": {
       "title": "开启你的音乐旅程",
@@ -99,6 +99,11 @@
           "answer": "我们提供丰富的自定义操作，包括颜色、布局等，让您能够根据个人喜好调整风格。"
         }
       ]
+    },
+    "theme": {
+      "light": "浅",
+      "dark": "深",
+      "system": "系统"
     }
   },
   "dashboard": {

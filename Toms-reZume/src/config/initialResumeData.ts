@@ -21,15 +21,15 @@ const initialGlobalSettings: GlobalSettings = {
 };
 
 export const initialResumeState = {
-  title: '新建简历',
+  title: '新建金汤历',
   basic: {
-    name: '魔方',
-    title: '高级前端工程师',
-    employementStatus: '离职',
-    email: 'zhangsan@example.com',
-    phone: '13800138000',
-    location: '北京市朝阳区',
-    birthDate: '1995-01',
+    name: '匿名',
+    title: '...',
+    employementStatus: '...',
+    email: '...',
+    phone: '...',
+    location: '...',
+    birthDate: '2000/11/11',
     fieldOrder: DEFAULT_FIELD_ORDER,
     icons: {
       email: 'Mail',
@@ -43,7 +43,7 @@ export const initialResumeState = {
       {
         id: 'personal',
         label: '个人网站',
-        value: 'https://zhangsan.dev',
+        value: '...',
         icon: 'Globe',
       },
     ],
@@ -58,8 +58,8 @@ export const initialResumeState = {
       school: '北京大学',
       major: '计算机科学与技术',
       degree: '本科',
-      startDate: '2013-09',
-      endDate: '2017-06',
+      startDate: '2019-09',
+      endDate: '2023-06',
       visible: true,
       gpa: '',
       description: `<ul class="custom-list">
@@ -91,9 +91,9 @@ export const initialResumeState = {
   experience: [
     {
       id: '1',
-      company: '字节跳动',
-      position: '高级前端工程师',
-      date: '2021/7 - 至今',
+      company: 'xxx',
+      position: 'xxx',
+      date: '2035/7 - 至今',
       visible: true,
       details: `<ul class="custom-list">
       <li>负责抖音创作者平台的开发与维护，主导多个核心功能的技术方案设计</li>
@@ -196,15 +196,15 @@ export const initialResumeState = {
 };
 
 export const initialResumeStateEn = {
-  title: 'New Resume',
+  title: 'New reZume',
   basic: {
-    name: 'John Smith',
-    title: 'Senior Frontend Engineer',
+    name: '...',
+    title: '...',
     employementStatus: 'Available',
-    email: 'john.smith@123.com',
-    phone: '555-123-4567',
-    location: 'San Francisco, CA',
-    birthDate: '',
+    email: '...',
+    phone: '...',
+    location: '...',
+    birthDate: '...',
     fieldOrder: DEFAULT_FIELD_ORDER,
     icons: {
       email: 'Mail',
@@ -226,8 +226,8 @@ export const initialResumeStateEn = {
       school: 'Stanford University',
       major: 'Computer Science',
       degree: '',
-      startDate: '2013-09',
-      endDate: '2017-06',
+      startDate: '2043-09',
+      endDate: '2047-06',
       visible: true,
       gpa: '',
       description: `<ul class="custom-list">
@@ -261,7 +261,7 @@ export const initialResumeStateEn = {
       id: '1',
       company: 'ByteDance',
       position: 'Senior Frontend Engineer',
-      date: '2021/7 - Present',
+      date: '2035/7 - Present',
       visible: true,
       details: `<ul class="custom-list">
       <li>Responsible for development and maintenance of TikTok Creator Platform, leading technical solution design for core features</li>
@@ -376,12 +376,15 @@ export const initialResumeStateEn = {
 };
 
 export const albumData: albums[] = [
-  { id: '1', img: '/avatar.jpg', title: 'Avatar' },
-  { id: '2', img: '/albums/Midwest.jpg', title: 'Midwest' },
-  { id: '3', img: '/albums/RDR2.png', title: 'RDR2' },
-  { id: '4', img: '/albums/Strategy.jpg', title: 'Strategy' },
-  { id: '5', img: '/albums/GNX.jpg', title: 'GNX' },
-  { id: '6', img: '/albums/brat.jpg', title: 'Brat' },
-  { id: '7', img: '/albums/IveTried.jpg', title: 'Ive Tried' },
-  { id: '8', img: '/albums/thisis4.jpg', title: 'This is 4' },
+  { id: '1', img: '/albums/ybar_k.jpg', title: 'alright, kid' },
+  { id: '2', img: '/albums/jumpbp.jpg', title: 'jump' },
+  { id: '3', img: '/albums/ivesecret.jpg', title: 'Ive Secret' },
+  { id: '4', img: '/albums/thisis4.jpg', title: 'This is 4' },
+  { id: '5', img: '/avatar.jpg', title: 'Avatar' },
+  { id: '6', img: '/albums/Midwest.jpg', title: 'Midwest' },
+  { id: '7', img: '/albums/RDR2.png', title: 'RDR2' },
+  { id: '8', img: '/albums/Strategy.jpg', title: 'Strategy' },
+  { id: '9', img: '/albums/GNX.jpg', title: 'GNX' },
+  { id: '10', img: '/albums/brat.jpg', title: 'Brat' },
+  { id: '11', img: '/albums/IveTried.jpg', title: 'Ive Tried' },
 ];

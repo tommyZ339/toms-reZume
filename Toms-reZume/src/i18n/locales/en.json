@@ -98,6 +98,11 @@
           "answer": "We offer rich customization options, including colors, layouts, and more, allowing you to adjust your resume style according to personal preferences and industry requirements."
         }
       ]
+    },
+    "theme": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
     }
   },
   "dashboard": {

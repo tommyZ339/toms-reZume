@@ -1,15 +1,16 @@
-import React from "react";
-import { useTranslations, useLocale } from "next-intl";
-import { motion } from "framer-motion";
-import * as Icons from "lucide-react";
-import { cn } from "@/lib/utils";
+import React from 'react';
+import Image from 'next/image';
+import { useTranslations, useLocale } from 'next-intl';
+import { motion } from 'framer-motion';
+import * as Icons from 'lucide-react';
+import { cn } from '@/lib/utils';
 import {
   BasicInfo,
   getBorderRadiusValue,
   GlobalSettings,
-} from "@/types/resume";
-import { ResumeTemplate } from "@/types/template";
-import { useResumeStore } from "@/store/useResumeStore";
+} from '@/types/resume';
+import { ResumeTemplate } from '@/types/template';
+import { useResumeStore } from '@/store/useResumeStore';
 
 interface BaseInfoProps {
   basic: BasicInfo | undefined;
@@ -23,11 +24,11 @@ const BaseInfo = ({
   globalSettings,
   template,
 }: BaseInfoProps) => {
-  const t = useTranslations("workbench");
+  const t = useTranslations('workbench');
   const locale = useLocale();
   const { setActiveSection } = useResumeStore();
   const useIconMode = globalSettings?.useIconMode ?? false;
-  const layout = basic?.layout || "left";
+  const layout = basic?.layout || 'center';
 
   const getIcon = (iconName: string | undefined) => {
     const IconComponent = Icons[
@@ -37,17 +38,17 @@ const BaseInfo = ({
   };
 
   const isModernTemplate = React.useMemo(() => {
-    return template?.layout === "modern";
+    return template?.layout === 'modern';
   }, [template]);
 
   const getOrderedFields = React.useMemo(() => {
     if (!basic.fieldOrder) {
       return [
         {
-          key: "email",
+          key: 'email',
           value: basic.email,
-          icon: basic.icons?.email || "Mail",
-          label: "电子邮箱",
+          icon: basic.icons?.email || 'Mail',
+          label: '电子邮箱',
           visible: true,
           custom: false,
         },
@@ -58,16 +59,16 @@ const BaseInfo = ({
       .filter(
         (field) =>
           field.visible !== false &&
-          field.key !== "name" &&
-          field.key !== "title"
+          field.key !== 'name' &&
+          field.key !== 'title'
       )
       .map((field) => ({
         key: field.key,
         value:
-          field.key === "birthDate" && basic[field.key]
+          field.key === 'birthDate' && basic[field.key]
             ? new Date(basic[field.key] as string).toLocaleDateString(locale)
             : (basic[field.key] as string),
-        icon: basic.icons?.[field.key] || "User",
+        icon: basic.icons?.[field.key] || 'User',
         label: field.label,
         visible: field.visible,
         custom: field.custom,
@@ -91,10 +92,10 @@ const BaseInfo = ({
 
   const getNameField = () => {
     const nameField = basic.fieldOrder?.find(
-      (field) => field.key === "name"
+      (field) => field.key === 'name'
     ) || {
-      key: "name",
-      label: "姓名",
+      key: 'name',
+      label: '姓名',
       visible: true,
     };
     return nameField.visible !== false ? nameField : null;
@@ -102,10 +103,10 @@ const BaseInfo = ({
 
   const getTitleField = () => {
     const titleField = basic.fieldOrder?.find(
-      (field) => field.key === "title"
+      (field) => field.key === 'title'
     ) || {
-      key: "title",
-      label: "职位",
+      key: 'title',
+      label: '职位',
       visible: true,
     };
     return titleField.visible !== false ? titleField : null;
@@ -122,16 +123,18 @@ const BaseInfo = ({
           height: `${basic.photoConfig?.height || 100}px`,
           borderRadius: getBorderRadiusValue(
             basic.photoConfig || {
-              borderRadius: "none",
+              borderRadius: 'none',
               customBorderRadius: 0,
             }
           ),
-          overflow: "hidden",
+          overflow: 'hidden',
         }}
       >
-        <img
+        <Image
           src={basic.photo}
           alt={`${basic.name}'s photo`}
+          width={basic.photoConfig?.width || 100}
+          height={basic.photoConfig?.height || 100}
           className="w-full h-full object-cover"
         />
       </div>
@@ -140,45 +143,47 @@ const BaseInfo = ({
 
   // 基础样式
   const baseContainerClass =
-    "hover:cursor-pointer hover:bg-gray-100 rounded-md transition-all duration-300 ease-in-out hover:shadow-md";
-  const baseFieldsClass = "";
+    'hover:cursor-pointer hover:bg-gray-100 rounded-md transition-all duration-300 ease-in-out hover:shadow-md';
+  const baseFieldsClass = '';
   const baseFieldItemClass =
-    "flex items-center whitespace-nowrap overflow-hidden text-baseFont";
-  const baseNameTitleClass = "flex flex-col";
+    'flex items-center whitespace-nowrap overflow-hidden text-baseFont';
+  const baseNameTitleClass = 'flex flex-col';
 
   // 左对齐布局样式
   const leftLayoutStyles = {
-    container: "flex items-center justify-between gap-6",
-    leftContent: "flex  items-center gap-6 ",
-    fields: "grid grid-cols-2 gap-x-8 gap-y-2 justify-start",
-    nameTitle: "text-left",
+    container: 'flex items-center justify-between gap-6',
+    leftContent: 'flex  items-center gap-6 ',
+    fields: 'grid grid-cols-2 gap-x-8 gap-y-2 justify-start',
+    nameTitle: 'text-left',
   };
 
   // 右对齐布局样式
   const rightLayoutStyles = {
-    container: "flex items-center justify-between gap-6 flex-row-reverse",
-    leftContent: "flex justify-end items-center gap-6 ",
-    fields: "grid grid-cols-2 gap-x-8 gap-y-2 justify-start",
-    nameTitle: "text-right",
+    container: 'flex items-center justify-between gap-6 flex-row-reverse',
+    leftContent: 'flex justify-end items-center gap-6 ',
+    fields: 'grid grid-cols-2 gap-x-8 gap-y-2 justify-start',
+    nameTitle: 'text-right',
   };
 
   // 居中布局样式
   const centerLayoutStyles = {
-    container: "flex flex-col items-center gap-3",
-    leftContent: "flex flex-col items-center gap-4",
-    fields: "w-full flex justify-start items-center flex-wrap gap-3",
-    nameTitle: "text-center",
+    container: 'flex flex-col items-center gap-3',
+    leftContent: 'flex flex-col items-center gap-4',
+    fields: 'w-full flex justify-start items-center flex-wrap gap-3',
+    nameTitle: 'text-center',
   };
 
   // 根据布局选择样式
   const getLayoutStyles = () => {
     switch (layout) {
-      case "right":
+      case 'right':
         return rightLayoutStyles;
-      case "center":
+      case 'center':
         return centerLayoutStyles;
-      default:
+      case 'left':
         return leftLayoutStyles;
+      default:
+        return centerLayoutStyles;
     }
   };
 
@@ -206,7 +211,7 @@ const BaseInfo = ({
         <motion.h2
           layout="position"
           style={{
-            fontSize: "18px",
+            fontSize: '18px',
           }}
         >
           {basic[titleField.key] as string}
@@ -221,22 +226,22 @@ const BaseInfo = ({
       className={fieldsContainerClass}
       style={{
         fontSize: `${globalSettings?.baseFontSize || 14}px`,
-        color: isModernTemplate ? "#fff" : "rgb(75, 85, 99)",
-        maxWidth: layout === "center" ? "none" : "600px",
+        color: isModernTemplate ? '#fff' : 'rgb(75, 85, 99)',
+        maxWidth: layout === 'center' ? 'none' : '600px',
       }}
     >
       {allFields.map((item) => (
         <motion.div
           key={item.key}
-          className={cn(baseFieldItemClass, isModernTemplate && "text-[#fff]")}
+          className={cn(baseFieldItemClass, isModernTemplate && 'text-[#fff]')}
           style={{
-            width: isModernTemplate ? "100%" : "",
+            width: isModernTemplate ? '100%' : '',
           }}
         >
           {useIconMode ? (
             <div className="flex items-center gap-1">
               {getIcon(item.icon)}
-              {item.key === "email" ? (
+              {item.key === 'email' ? (
                 <a href={`mailto:${item.value}`} className="underline">
                   {item.value}
                 </a>
@@ -261,7 +266,7 @@ const BaseInfo = ({
   );
 
   return (
-    <div className={containerClass} onClick={() => setActiveSection("basic")}>
+    <div className={containerClass} onClick={() => setActiveSection('basic')}>
       <div className={leftContentClass}>
         {PhotoComponent}
         {NameTitleComponent}

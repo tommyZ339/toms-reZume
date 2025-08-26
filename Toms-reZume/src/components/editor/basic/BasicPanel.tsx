@@ -348,7 +348,7 @@ const BasicPanel: React.FC = () => {
           <h2 className="text-lg font-medium">{t("layout")}</h2>
           <div className=" bg-white dark:bg-neutral-900 rounded-lg">
             <AlignSelector
-              value={basic?.layout || "left"}
+              value={basic?.layout || "center"}
               onChange={(value) =>
                 updateBasicInfo({
                   ...basic,
