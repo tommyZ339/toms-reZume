@@ -26,7 +26,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useResumeStore } from "@/store/useResumeStore";
 import { cn } from "@/lib/utils";
 
-const DEFAULT_AVATAR = "/avatar.png";
+const DEFAULT_AVATAR = "/avatar.jpg";
 
 interface Props {
   isOpen: boolean;
@@ -140,7 +140,7 @@ const PhotoConfigDrawer: React.FC<Props> = ({
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      handleFile(file);
+      handleFile(file); 
     }
   };
 
