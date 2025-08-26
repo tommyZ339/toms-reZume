@@ -21,11 +21,13 @@ import { Link, usePathname } from '@/i18n/routing.public';
 import { locales, localeNames } from '@/i18n/config';
 import { cn } from '@/lib/utils';
 import { useTheme } from 'next-themes';
+import { useHydration } from '@/hooks';
 
 const SettingsPage = () => {
   const [directoryHandle, setDirectoryHandle] =
     useState<FileSystemDirectoryHandle | null>(null);
   const [folderPath, setFolderPath] = useState<string>('');
+  const mounted = useHydration();
   const t = useTranslations();
   const locale = useLocale();
   const pathname = usePathname();
@@ -175,13 +177,15 @@ const SettingsPage = () => {
                 'flex items-center gap-3 px-3 py-2 rounded-lg text-left relative',
                 'transition-all duration-200',
                 'hover:bg-primary/10',
-                theme === 'light' && 'bg-primary/10'
+                mounted && theme === 'light' && 'bg-primary/10'
               )}
             >
               <div
                 className={cn(
                   'shrink-0',
-                  theme === 'light' ? 'text-primary' : 'text-muted-foreground'
+                  mounted && theme === 'light'
+                    ? 'text-primary'
+                    : 'text-muted-foreground'
                 )}
               >
                 <Sun className="h-5 w-5" />
@@ -190,7 +194,7 @@ const SettingsPage = () => {
                 <span
                   className={cn(
                     'font-medium text-sm',
-                    theme === 'light' && 'text-primary'
+                    mounted && theme === 'light' && 'text-primary'
                   )}
                 >
                   {t('dashboard.settings.theme.themes.light')}
@@ -204,13 +208,15 @@ const SettingsPage = () => {
                 'flex items-center gap-3 px-3 py-2 rounded-lg text-left relative',
                 'transition-all duration-200',
                 'hover:bg-primary/10',
-                theme === 'dark' && 'bg-primary/10'
+                mounted && theme === 'dark' && 'bg-primary/10'
               )}
             >
               <div
                 className={cn(
                   'shrink-0',
-                  theme === 'dark' ? 'text-primary' : 'text-muted-foreground'
+                  mounted && theme === 'dark'
+                    ? 'text-primary'
+                    : 'text-muted-foreground'
                 )}
               >
                 <Moon className="h-5 w-5" />
@@ -219,7 +225,7 @@ const SettingsPage = () => {
                 <span
                   className={cn(
                     'font-medium text-sm',
-                    theme === 'dark' && 'text-primary'
+                    mounted && theme === 'dark' && 'text-primary'
                   )}
                 >
                   {t('dashboard.settings.theme.themes.dark')}
@@ -233,13 +239,15 @@ const SettingsPage = () => {
                 'flex items-center gap-3 px-3 py-2 rounded-lg text-left relative',
                 'transition-all duration-200',
                 'hover:bg-primary/10',
-                theme === 'system' && 'bg-primary/10'
+                mounted && theme === 'system' && 'bg-primary/10'
               )}
             >
               <div
                 className={cn(
                   'shrink-0',
-                  theme === 'system' ? 'text-primary' : 'text-muted-foreground'
+                  mounted && theme === 'system'
+                    ? 'text-primary'
+                    : 'text-muted-foreground'
                 )}
               >
                 <Monitor className="h-5 w-5" />
@@ -248,7 +256,7 @@ const SettingsPage = () => {
                 <span
                   className={cn(
                     'font-medium text-sm',
-                    theme === 'system' && 'text-primary'
+                    mounted && theme === 'system' && 'text-primary'
                   )}
                 >
                   {t('dashboard.settings.theme.themes.system')}

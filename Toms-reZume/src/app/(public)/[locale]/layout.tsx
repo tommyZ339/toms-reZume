@@ -1,15 +1,14 @@
-import { ReactNode } from "react";
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { NextIntlClientProvider } from "next-intl";
+import { ReactNode } from 'react';
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
 import {
   getMessages,
   getTranslations,
-  setRequestLocale
-} from "next-intl/server";
-import Document from "@/components/Document";
-import { locales } from "@/i18n/config";
-import { Providers } from "@/app/providers";
+  setRequestLocale,
+} from 'next-intl/server';
+import { locales } from '@/i18n/config';
+import { Providers } from '@/app/providers';
 
 type Props = {
   children: ReactNode;
@@ -21,29 +20,29 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params: { locale }
+  params: { locale },
 }: Props): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: "common" });
-  const baseUrl = "https://google.com";
+  const t = await getTranslations({ locale, namespace: 'common' });
+  const baseUrl = 'https://google.com';
 
   return {
-    title: t("title") + " - " + t("subtitle"),
-    description: t("description"),
+    title: t('title') + ' - ' + t('subtitle'),
+    description: t('description'),
     alternates: {
-      canonical: `${baseUrl}/${locale}`
+      canonical: `${baseUrl}/${locale}`,
     },
     openGraph: {
-      title: t("title"),
-      description: t("description"),
+      title: t('title'),
+      description: t('description'),
       locale: locale,
-      alternateLocale: locale === "en" ? ["zh"] : ["en"]
-    }
+      alternateLocale: locale === 'en' ? ['zh'] : ['en'],
+    },
   };
 }
 
 export default async function LocaleLayout({
   children,
-  params: { locale }
+  params: { locale },
 }: Props) {
   setRequestLocale(locale);
 
@@ -54,10 +53,10 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <Document locale={locale}>
+    <div lang={locale}>
       <NextIntlClientProvider messages={messages}>
         <Providers>{children}</Providers>
       </NextIntlClientProvider>
-    </Document>
+    </div>
   );
 }

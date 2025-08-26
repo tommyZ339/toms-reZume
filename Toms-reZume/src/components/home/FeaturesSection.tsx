@@ -1,46 +1,46 @@
-"use client";
+'use client';
 
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { useState, useEffect, useRef, useCallback } from "react";
-import { CircleArrowRight } from "lucide-react";
-import AnimatedFeature from "./client/AnimatedFeature";
-import {cn} from "@/lib/utils";
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { CircleArrowRight } from 'lucide-react';
+import AnimatedFeature from './client/AnimatedFeature';
+import { cn } from '@/lib/utils';
 
 const features = [
   {
-    badge: "style",
-    badgeColor: "bg-pink-200",
-    title: "features.style.title",
-    description: "features.style.description",
+    badge: 'style',
+    badgeColor: 'bg-pink-200',
+    title: 'features.style.title',
+    description: 'features.style.description',
     items: [
       {
-        title: "features.style.item1",
-        description: "features.style.item1_description",
-        image: "/features/editor.png",
+        title: 'features.style.item1',
+        description: 'features.style.item1_description',
+        image: '/features/editor.png',
       },
       {
-        title: "features.style.item2",
-        description: "features.style.item2_description",
-        image: "/features/style.png",
+        title: 'features.style.item2',
+        description: 'features.style.item2_description',
+        image: '/features/style.png',
       },
     ],
   },
   {
-    badge: "safety",
-    badgeColor: "bg-blue-500",
-    title: "features.storage.title",
-    description: "features.storage.description",
+    badge: 'safety',
+    badgeColor: 'bg-blue-500',
+    title: 'features.storage.title',
+    description: 'features.storage.description',
     items: [
       {
-        title: "features.storage.item1",
-        description: "features.storage.item1_description",
-        image: "/features/svg/local-storage.svg",
+        title: 'features.storage.item1',
+        description: 'features.storage.item1_description',
+        image: '/features/svg/local-storage.svg',
       },
       {
-        title: "features.storage.item2",
-        description: "features.storage.item2_description",
-        image: "/features/svg/export-formats.svg",
+        title: 'features.storage.item2',
+        description: 'features.storage.item2_description',
+        image: '/features/svg/export-formats.svg',
       },
     ],
   },
@@ -49,7 +49,7 @@ const features = [
 const SLIDE_DURATION = 5000;
 
 export default function FeaturesSection() {
-  const t = useTranslations("home");
+  const t = useTranslations('home');
   const [activeFeatures, setActiveFeatures] = useState<number[]>(
     features.map(() => 0)
   );
@@ -185,10 +185,10 @@ export default function FeaturesSection() {
         <AnimatedFeature>
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">
-              {t("features.title")}
+              {t('features.title')}
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t("features.subtitle")}
+              {t('features.subtitle')}
             </p>
           </div>
         </AnimatedFeature>
@@ -197,7 +197,12 @@ export default function FeaturesSection() {
           <div className="grid grid-col-1 gap-4 md:gap-8 items-center">
             <div className="w-full md:w-auto space-y-6 md:mr-16">
               <div className="flex flex-col items-center md:items-start gap-2">
-                <span className={cn("text-xs font-semibold text-white px-2 py-1 rounded-full", features[0].badgeColor)}>
+                <span
+                  className={cn(
+                    'text-xs font-semibold text-white px-2 py-1 rounded-full',
+                    features[0].badgeColor
+                  )}
+                >
                   {features[0].badge}
                 </span>
                 <h3 className="text-2xl md:text-3xl font-bold text-center md:text-left">
@@ -256,8 +261,8 @@ export default function FeaturesSection() {
                         <span
                           className={`transition-all duration-200 ${
                             activeFeatures[0] === index
-                              ? "text-blue-600 dark:text-blue-400 font-semibold"
-                              : "text-muted-foreground"
+                              ? 'text-blue-600 dark:text-blue-400 font-semibold'
+                              : 'text-muted-foreground'
                           }`}
                         >
                           {t(item.title)}
@@ -271,10 +276,9 @@ export default function FeaturesSection() {
             <div className="w-full md:w-auto relative">
               <AnimatedFeature key={`feature-${activeFeatures[0]}`}>
                 <div className="relative aspect-[2/1] w-full overflow-hidden rounded-xl group">
-
                   <div
                     key={activeFeatures[0]}
-                    className="animate-fade-in w-full h-full"
+                    className="animate-fade-in w-full h-full relative"
                   >
                     <Image
                       src={features[0].items[activeFeatures[0]].image}
@@ -296,7 +300,12 @@ export default function FeaturesSection() {
           <div className="grid grid-col-1 gap-4 md:gap-8 items-center">
             <div className="w-full md:w-auto space-y-6">
               <div className="flex flex-col items-center md:items-start gap-2">
-                <span className={cn("text-xs font-semibold text-white px-2 py-1 rounded-full", features[1].badgeColor)}>
+                <span
+                  className={cn(
+                    'text-xs font-semibold text-white px-2 py-1 rounded-full',
+                    features[1].badgeColor
+                  )}
+                >
                   {features[1].badge}
                 </span>
                 <h3 className="text-2xl md:text-3xl font-bold text-center md:text-left">
@@ -355,8 +364,8 @@ export default function FeaturesSection() {
                         <span
                           className={`transition-all duration-200 ${
                             activeFeatures[1] === index
-                              ? "text-green-600 dark:text-green-400 font-semibold"
-                              : "text-muted-foreground"
+                              ? 'text-green-600 dark:text-green-400 font-semibold'
+                              : 'text-muted-foreground'
                           }`}
                         >
                           {t(item.title)}
@@ -370,10 +379,9 @@ export default function FeaturesSection() {
             <div className="flex-1 w-full md:w-auto relative">
               <AnimatedFeature key={`feature-storage-${activeFeatures[1]}`}>
                 <div className="relative aspect-[2/1] w-full overflow-hidden rounded-xl group">
-
                   <div
                     key={activeFeatures[1]}
-                    className="animate-fade-in w-full h-full"
+                    className="animate-fade-in w-full h-full relative"
                   >
                     <Image
                       src={features[1].items[activeFeatures[1]].image}

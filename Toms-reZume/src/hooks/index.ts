@@ -7,6 +7,9 @@ export * from './useFormFields';
 // UI 状态管理
 export * from './useUIState';
 
+// Hydration 相关
+export * from './useHydration';
+
 // 滚动和视口
 export * from './useScroll';
 

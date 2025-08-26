@@ -53,7 +53,7 @@ export default function IntroductionSection() {
             modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
             className={cn('mySwiper', 'max-w-3xl h-[40vh] overflow-visible')}
           >
-            {albumData.map((album) => (
+            {albumData.map((album, index) => (
               <SwiperSlide
                 key={'album' + album.id}
                 className="flex justify-center items-center"
@@ -64,8 +64,9 @@ export default function IntroductionSection() {
                     alt={`Album ${album.id}`}
                     fill
                     className="object-cover rounded-lg shadow-lg"
-                    loading="lazy"
-                    sizes="(max-width: 768px)"
+                    priority={index === 0} // 第一张图片优先加载
+                    loading={index === 0 ? undefined : 'lazy'} // 第一张图片不延迟加载
+                    sizes="(max-width: 768px) 28vh, 28vh"
                   />
                 </div>
               </SwiperSlide>

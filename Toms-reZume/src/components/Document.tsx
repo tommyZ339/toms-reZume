@@ -1,9 +1,4 @@
-import { Inter } from "next/font/google";
-import { ReactNode } from "react";
-
-const inter = Inter({
-  subsets: ["latin"],
-});
+import { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
@@ -12,12 +7,10 @@ type Props = {
 };
 
 export default function Document({ children, locale, bodyClassName }: Props) {
+  // 只返回内容，不包含 html/body 标签
   return (
-    <html className={inter.className} lang={locale} suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico?v=2" />
-      </head>
-      <body className={bodyClassName}>{children}</body>
-    </html>
+    <div className={bodyClassName} lang={locale}>
+      {children}
+    </div>
   );
 }

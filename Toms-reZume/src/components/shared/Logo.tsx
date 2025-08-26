@@ -1,6 +1,7 @@
-"use client";
-import React from "react";
-import { useTheme } from "next-themes";
+'use client';
+import React from 'react';
+import { useTheme } from 'next-themes';
+import { useHydration } from '@/hooks';
 
 interface LogoProps {
   size?: number;
@@ -12,16 +13,17 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({
   size = 100,
-  className = "",
+  className = '',
   onClick,
   startColor,
   endColor,
 }) => {
   const { theme } = useTheme();
+  const mounted = useHydration();
 
-  // 默认使用主题色
-  const defaultStartColor = theme === "dark" ? "#A700FF" : "#000000";
-  const defaultEndColor = theme === "dark" ? "#4F46E5" : "#171717";
+  // 默认使用主题色，未挂载时使用浅色主题
+  const defaultStartColor = mounted && theme === 'dark' ? '#A700FF' : '#000000';
+  const defaultEndColor = mounted && theme === 'dark' ? '#4F46E5' : '#171717';
 
   // 使用传入的颜色或默认颜色
   const gradientStartColor = startColor || defaultStartColor;
