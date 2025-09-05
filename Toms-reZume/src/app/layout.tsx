@@ -37,7 +37,7 @@ export default function RootLayout({ children }: Props) {
       <head>
         <link rel="icon" href="/favicon.ico?v=2" />
       </head>
-      <body>{children}</body>
+      <body className="h-screen overflow-hidden">{children}</body>
     </html>
   );
 }

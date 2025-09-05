@@ -1,25 +1,25 @@
-"use client";
+'use client';
 
-import { useState, useEffect, memo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Eye, Edit2, Menu, PanelLeft, Minimize2 } from "lucide-react";
-import { EditorHeader } from "@/components/editor/EditorHeader";
-import { SidePanel } from "@/components/editor/SidePanel";
-import { EditPanel } from "@/components/editor/EditPanel";
-import PreviewPanel from "@/components/preview";
+import { useState, useEffect, memo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Eye, Edit2, Menu, PanelLeft, Minimize2 } from 'lucide-react';
+import { EditorHeader } from '@/components/editor/EditorHeader';
+import { SidePanel } from '@/components/editor/SidePanel';
+import { EditPanel } from '@/components/editor/EditPanel';
+import PreviewPanel from '@/components/preview';
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/components/ui/resizable";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+} from '@/components/ui/resizable';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from '@/components/ui/tooltip';
 
 const LAYOUT_CONFIG = {
   DEFAULT: [20, 32, 48],
@@ -35,17 +35,17 @@ const DragHandle = ({ show = true }) => {
     <ResizableHandle className="relative w-1.5 group">
       <div
         className={cn(
-          "absolute inset-y-0 left-1/2 w-1 -translate-x-1/2",
-          "group-hover:bg-primary/20 group-data-[dragging=true]:bg-primary",
-          "dark:bg-neutral-700/50 bg-gray-200"
+          'absolute inset-y-0 left-1/2 w-1 -translate-x-1/2',
+          'group-hover:bg-primary/20 group-data-[dragging=true]:bg-primary',
+          'dark:bg-neutral-700/50 bg-gray-200'
         )}
       />
       <div
         className={cn(
-          "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
-          "w-4 h-8 rounded-full opacity-0 group-hover:opacity-100",
-          "flex items-center justify-center",
-          "dark:bg-neutral-800 bg-gray-200"
+          'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
+          'w-4 h-8 rounded-full opacity-0 group-hover:opacity-100',
+          'flex items-center justify-center',
+          'dark:bg-neutral-800 bg-gray-200'
         )}
       >
         <div className="w-0.5 h-4 bg-gray-400 rounded-full" />
@@ -72,17 +72,17 @@ const LayoutControls = memo(
   }) => (
     <div
       className={cn(
-        "absolute bottom-6 left-1/2 -translate-x-1/2",
-        "flex items-center gap-2 z-10 p-2 rounded-full",
-        "dark:bg-neutral-900/80 dark:border dark:border-neutral-800 bg-white/80 border border-gray-200",
-        "backdrop-blur-sm shadow-lg"
+        'absolute bottom-6 left-1/2 -translate-x-1/2',
+        'flex items-center gap-2 z-10 p-2 rounded-full',
+        'dark:bg-neutral-900/80 dark:border dark:border-neutral-800 bg-white/80 border border-gray-200',
+        'backdrop-blur-sm shadow-lg'
       )}
     >
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
-              variant={sidePanelCollapsed ? "secondary" : "ghost"}
+              variant={sidePanelCollapsed ? 'secondary' : 'ghost'}
               size="icon"
               className="h-9 w-9 rounded-full"
               onClick={toggleSidePanel}
@@ -92,19 +92,19 @@ const LayoutControls = memo(
           </TooltipTrigger>
           <TooltipContent>
             <p className="text-xs">
-              {sidePanelCollapsed ? "展开侧边栏" : "收起侧边栏"}
+              {sidePanelCollapsed ? '展开侧边栏' : '收起侧边栏'}
             </p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
 
-      <div className={cn("h-5 w-px mx-1", "dark:bg-neutral-800 bg-gray-200")} />
+      <div className={cn('h-5 w-px mx-1', 'dark:bg-neutral-800 bg-gray-200')} />
 
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
-              variant={editPanelCollapsed ? "secondary" : "ghost"}
+              variant={editPanelCollapsed ? 'secondary' : 'ghost'}
               size="icon"
               className="h-9 w-9 rounded-full"
               onClick={toggleEditPanel}
@@ -118,7 +118,7 @@ const LayoutControls = memo(
           </TooltipTrigger>
           <TooltipContent>
             <p className="text-xs">
-              {editPanelCollapsed ? "展开编辑面板" : "收起编辑面板"}
+              {editPanelCollapsed ? '展开编辑面板' : '收起编辑面板'}
             </p>
           </TooltipContent>
         </Tooltip>
@@ -128,7 +128,7 @@ const LayoutControls = memo(
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
-              variant={previewPanelCollapsed ? "secondary" : "ghost"}
+              variant={previewPanelCollapsed ? 'secondary' : 'ghost'}
               size="icon"
               className="h-9 w-9 rounded-full"
               onClick={togglePreviewPanel}
@@ -142,7 +142,7 @@ const LayoutControls = memo(
           </TooltipTrigger>
           <TooltipContent>
             <p className="text-xs">
-              {previewPanelCollapsed ? "展开预览面板" : "收起预览面板"}
+              {previewPanelCollapsed ? '展开预览面板' : '收起预览面板'}
             </p>
           </TooltipContent>
         </Tooltip>
@@ -151,7 +151,7 @@ const LayoutControls = memo(
   )
 );
 
-LayoutControls.displayName = "LayoutControls";
+LayoutControls.displayName = 'LayoutControls';
 
 export default function Home() {
   const [sidePanelCollapsed, setSidePanelCollapsed] = useState(false);
@@ -229,21 +229,21 @@ export default function Home() {
   return (
     <main
       className={cn(
-        "w-full min-h-screen  overflow-hidden",
-        "bg-white text-gray-900",
-        "dark:bg-neutral-900 dark:text-neutral-200"
+        'w-full h-screen overflow-hidden', // 改为固定高度
+        'bg-white text-gray-900',
+        'dark:bg-neutral-900 dark:text-neutral-200'
       )}
     >
       <EditorHeader />
       {/* 桌面端布局 */}
       <div className="hidden md:block h-[calc(100vh-64px)]">
         <ResizablePanelGroup
-          key={panelSizes?.join("-")}
+          key={panelSizes?.join('-')}
           direction="horizontal"
           className={cn(
-            "h-full",
-            "border border-gray-200 bg-white",
-            "dark:border-neutral-800 dark:bg-neutral-900/50"
+            'h-full',
+            'border border-gray-200 bg-white',
+            'dark:border-neutral-800 dark:bg-neutral-900/50'
           )}
         >
           {/* 侧边栏面板 */}
@@ -255,7 +255,7 @@ export default function Home() {
                 defaultSize={panelSizes?.[0]}
                 minSize={20}
                 className={cn(
-                  "dark:bg-neutral-900 dark:border-r dark:border-neutral-800"
+                  'dark:bg-neutral-900 dark:border-r dark:border-neutral-800'
                 )}
               >
                 <div className="h-full overflow-y-auto">
@@ -275,7 +275,7 @@ export default function Home() {
                 minSize={32}
                 defaultSize={panelSizes?.[1]}
                 className={cn(
-                  "dark:bg-neutral-900 dark:border-r dark:border-neutral-800"
+                  'dark:bg-neutral-900 dark:border-r dark:border-neutral-800'
                 )}
               >
                 <div className="h-full">
